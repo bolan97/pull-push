@@ -1,6 +1,6 @@
 // draw the base grid
 let cellSize = 40;
-let tempDiff = [ 108, 208, -11, 20, 5 ];
+let tempDiff = [ 10,0,-30,5,20,250];
 
 function setup() {
   createCanvas(800,800);
@@ -40,7 +40,7 @@ function drawLines() {
 	let cellNum = (j/cellSize * width/cellSize) + i/cellSize;
 	   let lines = tempDiff[cellNum];
 		// for each square, draw num lines in a single direction
-		let direction = int(random(6));
+		let direction = int(random(7));
 		if (lines < -10)
 		{
 		   stroke(8, 60, 41);
@@ -61,11 +61,15 @@ function drawLines() {
 		   stroke(107, 45, 131);
 		  
 	 }
-	 else if (lines > 10)
+	 else if (lines >= 10 && lines < 100)
 		{
-		   stroke(80, 28, 34);
+		   stroke(255, 255, 255);
+
 		  
 	  }
+	  else if (lines > 100)
+		{
+		   stroke(80, 28, 34);
 
       switch(direction)
       {
