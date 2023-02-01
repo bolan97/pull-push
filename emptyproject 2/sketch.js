@@ -1,6 +1,6 @@
 // draw the base grid
 let cellSize = 40;
-let tempDiff = [ 10,0,-30,5,20,250];
+let tempDiff = [ 10,0,-30,5,20,250,-30,20,-5,0,50,-2,260];
 
 function setup() {
   createCanvas(800,800);
@@ -63,13 +63,13 @@ function drawLines() {
 	 }
 	 else if (lines >= 10 && lines < 100)
 		{
-		   stroke(255, 255, 255);
-
+		   stroke(80, 28, 34);
 		  
 	  }
 	  else if (lines > 100)
 		{
-		   stroke(80, 28, 34);
+		   stroke(255, 255, 255);
+		}
 
       switch(direction)
       {
