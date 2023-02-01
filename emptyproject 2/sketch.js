@@ -1,4 +1,3 @@
-// draw the base grid
 let cellSize = 40;
 let tempDiff = [ 10,0,-30,5,20,250,-30,20,-5,0,50,-2,260];
 
