@@ -9,9 +9,13 @@ function setup() {
 
 
 function draw() {
- 
-  drawGrid();
-  drawLines();
+	randomSeed(1024);
+	background(0);
+	strokeWeight(0.3);
+	stroke(0);
+
+    drawGrid();
+    drawLines();
  
 }
 
@@ -61,6 +65,53 @@ function drawLines() {
 		   stroke(80, 28, 34);
 		  
 	  }
+
+      switch(direction)
+      {
+        // left to right
+        case 0:
+          for (let k=0; k<lines; k++)
+          {
+            let jitter = random(cellSize);
+            ftline(i, j+jitter, i+cellSize, j+jitter);
+          }
+        break;
+        
+        // top to bottom
+        case 1:
+          for (let k=0; k<lines; k++)
+          {
+            let jitter = random(cellSize);
+            ftline(i+jitter, j, i+jitter, j+cellSize);
+		
+          }
+        break;
+        
+        // top right to bottom left
+        case 2:
+          for (let k=0; k<lines; k++)
+          {
+            let jitter = random(cellSize/2);
+            if (int(random(2))==1)
+              ftline(i+cellSize-jitter, j, i, j+cellSize-jitter);
+            else
+              ftline(i+cellSize, j+jitter, i+jitter, j+cellSize);
+			
+          }
+        break;
+        
+        // top left to bottom right
+        default:
+          for (let k=0; k<lines; k++)
+          {
+            let jitter = random(cellSize/2);
+            if (int(random(2))==1)
+              ftline(i+jitter, j, i+cellSize, j+cellSize-jitter);
+            else
+              ftline(i, j+jitter, i+cellSize-jitter, j+cellSize);
+			
+          }
+		}
 	}
   }
 }
