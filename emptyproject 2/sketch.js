@@ -1,9 +1,9 @@
 // draw the base grid
 let cellSize = 40;
-let tempDiff = [ 100, 200, -11, 20, 5 ];
+let tempDiff = [ 108, 208, -11, 20, 5 ];
 
 function setup() {
-  createCanvas(900,900);
+  createCanvas(800,800);
   smooth();
 }
 
@@ -20,7 +20,7 @@ function draw() {
 }
 
 function drawGrid() {
-	stroke(255);
+	stroke(0);
       for (let i=0; i<width; i+=cellSize)
     {
       
