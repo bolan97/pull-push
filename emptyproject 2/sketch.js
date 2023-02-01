@@ -1,6 +1,6 @@
 // draw the base grid
 let cellSize = 40;
-let tempDiff = [];
+let tempDiff = [ 100, 200, -11, 20, 5 ];
 
 function setup() {
   createCanvas(900,900);
