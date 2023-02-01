@@ -144,3 +144,15 @@ function ftline(x1,y1,x2,y2 ) {
 	vertex( x2 + random(-3,3), y2 +random(-3,3));
 	endShape();  
   }
+  
+  // function ftline(x1,y1,x2,y2 ) {
+  //   noFill();
+  //   beginShape();
+  //   vertex( x1 + random(-30,30), y1 +random(-30,30));
+  //   curveVertex( x1 + random(-30,30), y1 +random(-30,30));
+  //   curveVertex( x1+(x2 -x1)/3 + random(-30,30), y1 + (y2-y1)/3 +random(-30,30));
+  //   curveVertex( x1+2*(x2-x1)/3 + random(-30,30), y1+ 2*(y2-y1)/3 +random(-30,30)); 
+  //   curveVertex( x2 + random(-30,30), y2 +random(-30,30));
+  //   vertex( x2 + random(-30,30), y2 +random(-30,30));
+  //   endShape();  
+  //   }
