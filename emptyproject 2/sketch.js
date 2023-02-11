@@ -92,7 +92,7 @@ function drawLines() {
         case 0:
           for (let k=0; k<lines; k++)
           {
-            let jitter = random(cellSize);
+            let jitter = random(cellSize*6);
             ftline(i, j+jitter, i+cellSize, j+jitter);
           }
         break;
@@ -101,7 +101,7 @@ function drawLines() {
         case 1:
           for (let k=0; k<lines; k++)
           {
-            let jitter = random(cellSize);
+            let jitter = random(cellSize*6);
             ftline(i+jitter, j, i+jitter, j+cellSize);
 		
           }
@@ -111,7 +111,7 @@ function drawLines() {
         case 2:
           for (let k=0; k<lines; k++)
           {
-            let jitter = random(cellSize/2);
+            let jitter = random(cellSize*6);
             if (int(random(2))==1)
               ftline(i+cellSize-jitter, j, i, j+cellSize-jitter);
             else
@@ -124,7 +124,7 @@ function drawLines() {
         default:
           for (let k=0; k<lines; k++)
           {
-            let jitter = random(cellSize/2);
+            let jitter = random(cellSize*6);
             if (int(random(2))==1)
               ftline(i+jitter, j, i+cellSize, j+cellSize-jitter);
             else
@@ -134,28 +134,16 @@ function drawLines() {
 		}
 	}
   }
-}
+} 
 
-function ftline(x1,y1,x2,y2 ) {
-	noFill();
-	beginShape();
-	vertex( x1 + random(-3,3), y1 +random(-3,3));
-	curveVertex( x1 + random(-3,3), y1 +random(-3,3));
-	curveVertex( x1+(x2 -x1)/3 + random(-3,3), y1 + (y2-y1)/3 +random(-3,3));
-	curveVertex( x1+2*(x2-x1)/3 + random(-3,3), y1+ 2*(y2-y1)/3 +random(-3,3)); 
-	curveVertex( x2 + random(-3,3), y2 +random(-3,3));
-	vertex( x2 + random(-3,3), y2 +random(-3,3));
-	endShape();  
-  }
-  
-  // function ftline(x1,y1,x2,y2 ) {
-  //   noFill();
-  //   beginShape();
-  //   vertex( x1 + random(-30,30), y1 +random(-30,30));
-  //   curveVertex( x1 + random(-30,30), y1 +random(-30,30));
-  //   curveVertex( x1+(x2 -x1)/3 + random(-30,30), y1 + (y2-y1)/3 +random(-30,30));
-  //   curveVertex( x1+2*(x2-x1)/3 + random(-30,30), y1+ 2*(y2-y1)/3 +random(-30,30)); 
-  //   curveVertex( x2 + random(-30,30), y2 +random(-30,30));
-  //   vertex( x2 + random(-30,30), y2 +random(-30,30));
-  //   endShape();  
-  //   }
+  function ftline(x1,y1,x2,y2 ) {
+    noFill();
+    beginShape();
+    vertex( x1 + random(-50,50), y1 +random(-50,50));
+    curveVertex( x1 + random(-50,50), y1 +random(-50,50));
+    curveVertex( x1+(x2 -x1)/3 + random(-50,50), y1 + (y2-y1)/3 +random(-50,50));
+    curveVertex( x1+2*(x2-x1)/3 + random(-50,50), y1+ 2*(y2-y1)/3 +random(-50,50)); 
+    curveVertex( x2 + random(-50,50), y2 +random(-50,50));
+    vertex( x2 + random(-50,50), y2 +random(-50,50));
+    endShape();  
+    }
